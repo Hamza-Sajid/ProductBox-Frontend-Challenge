@@ -1,9 +1,9 @@
 // App import
 import NavBarMenu from "./components/NavBarMenu/NavBarMenu"
 import SideBarMenu from "./components/SideBarMenu/SideBarMenu"
-import HomePage from "./pages/HomePage"
+import PopularProducts from "./pages/PopularProducts"
 
-const App = ()=> {
+const App = () => {
   return (
     <div className="flex">
       <div className="w-1/6">
@@ -12,7 +12,7 @@ const App = ()=> {
 
       <div className="w-full">
         <NavBarMenu />
-        <HomePage />
+        <PopularProducts />
       </div>
     </div>
   )
