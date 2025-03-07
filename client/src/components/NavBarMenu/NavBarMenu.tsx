@@ -14,7 +14,7 @@ const NavBarMenu = () => {
      * @returns 
      */
     const calculateTotalPrice = (products: CartItemInterface[]) => {
-        return products.reduce((total: any, product: any) => {
+        return products.reduce((total: number, product: any) => {
             // Converting price from string to number and multipling by quantity
             const itemTotal = parseFloat(product.price) * product.quantity;
             return total + itemTotal;
