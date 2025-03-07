@@ -24,7 +24,7 @@ const ProductForm = () => {
     // Handler to submit form data to server
     const handleSubmit = async (value: AddProductFormData) => {
         try {
-            const response = await axios.post(`${config.serverPath}/items`, value);
+            await axios.post(`${config.serverPath}/items`, value);
             notifySuccess();
             setTimeout(() => {
                 navigate('/trending') // On success redirecting to /product page
