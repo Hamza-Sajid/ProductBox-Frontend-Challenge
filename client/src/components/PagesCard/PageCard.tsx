@@ -9,7 +9,7 @@ const PageCard: React.FC<PageCardProps> = ({ title, thumbnail: Thumbnail, descri
   return (
     <Link to={path}>
       <div className="card bg-base-100 w-full h-96 shadow-sm cursor-pointer ">
-        <figure>
+        <figure className="w-96 h-96 overflow-hidden">
           <img
             src={Thumbnail}
             alt={title} />

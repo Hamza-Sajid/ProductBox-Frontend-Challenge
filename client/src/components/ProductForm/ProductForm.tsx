@@ -2,7 +2,7 @@
 import { useState } from "react";
 // Third party import
 import axios from "axios";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { useNavigate } from "react-router";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 // Aoo imports
@@ -23,7 +23,6 @@ const ProductForm = () => {
 
     // Handler to submit form data to server
     const handleSubmit = async (value: AddProductFormData) => {
-        console.log('running')
         try {
             const response = await axios.post(`${config.serverPath}/items`, value);
             notifySuccess();
@@ -48,7 +47,6 @@ const ProductForm = () => {
                 <Form>
                     <fieldset className="fieldset w-auto bg-base-100 border border-base-300 p-4 rounded-box">
                         <legend className="fieldset-legend">New product form</legend>
-
                         <label htmlFor="name" className="fieldset-label">Item Name</label>
                         <Field
                             name="name"
@@ -73,11 +71,10 @@ const ProductForm = () => {
                             placeholder="gitty.img-url.com/ddz8"
                         />
                         <ErrorMessage name="img" component="div" className="text-red-500" />
-                        <button className="btn btn-neutral mt-4" type="submit">Submit</button>
+                        <button className="btn bg-gray-700 text-white mt-4" type="submit">Submit</button>
                     </fieldset>
                 </Form>
             </Formik>
-            <ToastContainer autoClose={1500} />
         </>
     )
 }
