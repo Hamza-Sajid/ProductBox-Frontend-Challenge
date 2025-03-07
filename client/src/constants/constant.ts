@@ -52,3 +52,8 @@ export const menuButtons = [
         path: 'addProduct'
     }
 ]
+
+export const toastMsg = {
+    success: 'Product added successfully!',
+    failure: 'Product is nott added' 
+}
