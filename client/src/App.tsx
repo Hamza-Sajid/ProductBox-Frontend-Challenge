@@ -1,5 +1,7 @@
-// App import
+// Third party import
 import { Route, Routes } from "react-router"
+import { ToastContainer } from "react-toastify"
+// App import
 import NavBarMenu from "./components/NavBarMenu/NavBarMenu"
 import SideBarMenu from "./components/SideBarMenu/SideBarMenu"
 import AddProduct from "./pages/AddProduct"
@@ -23,6 +25,7 @@ const App = () => {
           <Route path="addProduct" element={<AddProduct />} />
         </Routes>
       </div>
+      <ToastContainer autoClose={1500}/>
     </div>
   )
 }
