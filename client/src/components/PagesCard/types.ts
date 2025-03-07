@@ -1,5 +1,6 @@
 export interface PageCardProps {
     title: string,
     description: string,
-    thumbnail: string
+    thumbnail: string,
+    path: string
 }

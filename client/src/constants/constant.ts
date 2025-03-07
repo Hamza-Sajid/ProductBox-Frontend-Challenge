@@ -12,17 +12,20 @@ export const pagesCard = [
     {
         title: 'Trending Products',
         thumbnail: TrendingProdImg,
-        description: 'Explore our top notch, elegent products'
+        description: 'Explore our top notch, elegent products',
+        path: '/trending'
     },
     {
         title: 'Track Cart',
         thumbnail: CartImg,
-        description: 'Make sure to fill your cart with the best of best items'
+        description: 'Make sure to fill your cart with the best of best items',
+        path: '/cart'
     },
     {
         title: 'Add Products',
         thumbnail: AddProductsImg,
-        description: 'Put your luxry with us, to get connect with deep-pockets'
+        description: 'Put your luxry with us, to get connect with deep-pockets',
+        path: '/addProduct'
     },
 ]
 
@@ -30,18 +33,22 @@ export const pagesCard = [
 export const menuButtons = [
     {
         text: 'Home Page',
-        icon: HomeIcon
+        icon: HomeIcon,
+        path: '/'
     },
     {
         text: 'Popular Products',
-        icon: TrendingIcon
+        icon: TrendingIcon,
+        path: 'trending'
     },
     {
         text: 'Cart',
-        icon: CartIcon
+        icon: CartIcon,
+        path: 'cart'
     },
     {
         text: 'Add Product',
-        icon: AddIcon
+        icon: AddIcon,
+        path: 'addProduct'
     }
 ]

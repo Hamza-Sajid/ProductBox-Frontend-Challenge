@@ -1,6 +1,10 @@
 // App import
+import { Route, Routes } from "react-router"
 import NavBarMenu from "./components/NavBarMenu/NavBarMenu"
 import SideBarMenu from "./components/SideBarMenu/SideBarMenu"
+import AddProduct from "./pages/AddProduct"
+import CartPage from "./pages/CartPage"
+import HomePage from "./pages/HomePage"
 import PopularProducts from "./pages/PopularProducts"
 
 const App = () => {
@@ -12,7 +16,12 @@ const App = () => {
 
       <div className="w-full">
         <NavBarMenu />
-        <PopularProducts />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="trending" element={<PopularProducts />} />
+          <Route path="cart" element={<CartPage />} />
+          <Route path="addProduct" element={<AddProduct />} />
+        </Routes>
       </div>
     </div>
   )
