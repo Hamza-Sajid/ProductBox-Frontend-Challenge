@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import { LuShoppingCart as CartIcon } from "react-icons/lu";
 // App import
 import { useCart } from "../../store/CartContext";
+import { CartItemInterface } from "../../pages/types";
 
 const NavBarMenu = () => {
     const cartItems = useCart().cartItems;
@@ -12,7 +13,7 @@ const NavBarMenu = () => {
      * @param products 
      * @returns 
      */
-    const calculateTotalPrice = (products: any) => {
+    const calculateTotalPrice = (products: CartItemInterface[]) => {
         return products.reduce((total: any, product: any) => {
             // Converting price from string to number and multipling by quantity
             const itemTotal = parseFloat(product.price) * product.quantity;
@@ -25,9 +26,9 @@ const NavBarMenu = () => {
         <div className="navbar bg-base-100 shadow-sm">
             <div className="flex-1">
                 <div className="inline-grid *:[grid-area:1/1]">
-                    <div className="status status-info animate-ping"></div>
-                    <div className="status status-success"></div>
-                </div> <span className='font-semibold text-gray-500'>Year Biggest Sale Is Live!!</span>
+                    <div className="status bg-blue-800 animate-ping"></div>
+                    <div className="status bg-blue-600"></div>
+                </div> <span className='font-sans text-gray-600'>Year Biggest Sale Is Live!!</span>
             </div>
             <div className="flex-none">
                 <div className="dropdown dropdown-end">
