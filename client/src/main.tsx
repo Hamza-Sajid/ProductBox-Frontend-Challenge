@@ -6,12 +6,15 @@ import { BrowserRouter } from "react-router";
 // App imports
 import './index.css'
 import App from './App.tsx'
+import { CartProvider } from './store/CartContext.tsx';
 
 createRoot(document.getElementById('root')!).render(
 
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <CartProvider>
+        <App />
+      </CartProvider>
     </BrowserRouter>
   </StrictMode>,
 )
