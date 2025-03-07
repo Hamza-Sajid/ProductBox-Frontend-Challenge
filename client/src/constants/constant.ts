@@ -55,5 +55,10 @@ export const menuButtons = [
 
 export const toastMsg = {
     success: 'Product added successfully!',
-    failure: 'Product is nott added' 
+    failure: 'Product is not added',
+    deleted: 'Product is deleted',
+    deleteFail: 'Failed to delete product',
+    inCart: 'Product is added to the cart! ',
+    removed: 'Product removed from cart!',
+    removaFail: 'Failed to remove product from cart.'
 }
