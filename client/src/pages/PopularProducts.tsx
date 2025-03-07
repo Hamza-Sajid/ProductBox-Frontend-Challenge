@@ -7,6 +7,7 @@ import { config } from '../config/config';
 import { ProductCardInterface } from '../components/ProductsCard/types';
 import ProductCard from '../components/ProductsCard/ProductCard'
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
+import FilterButton from '../components/FilterButton/FilterButton';
 
 
 const PopularProducts = () => {
@@ -33,7 +34,12 @@ const PopularProducts = () => {
   if (error) return <ErrorScreen error={error} />;
   return (
     <div>
-      <h2 className='text-4xl p-6 text-center text-gray-800'>Trending Products</h2>
+      <div className='flex justify-center items-center'>
+        <div className='w-[90%]'>
+          <h2 className='text-4xl p-6 text-gray-800'>Trending Products</h2>
+        </div>
+        <div><FilterButton products={productsData} updateProduct={setProductsData} /></div>
+      </div>
       <hr className='text-gray-200' />
       <div className='p-20 flex flex-wrap gap-20'>
         {
@@ -44,7 +50,6 @@ const PopularProducts = () => {
           })
         }
       </div>
-
     </div>
   )
 }
